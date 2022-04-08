@@ -21,7 +21,8 @@ This package contains the following Aura components:
 or sections depending on the information actually set on the campaign. 
 
 ![Messages Customization](/media/sfpegDmMessages.png)<br/>
-<center>_Examples of different CampaignMessages customizations_</center>
+_Examples of different CampaignMessages customizations_
+
 
 * **sfpegDmBulkSendEntryCmp** to use the BulkSendEntry standard component directly on the Campaign
 record page instead of the Bulk Send Job one, leveraging a direct lookup from the Campaign to e.g. the
