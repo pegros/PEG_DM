@@ -20,14 +20,14 @@ This package contains the following Aura components:
 * **sfpegDmMessagesCmp** to customise the CampaignMessages standard component to hide some buttons
 or sections depending on the information actually set on the campaign. 
 
-![Messages Customization](/media/sfpegMessages.png)
+![Messages Customization](/media/sfpegDmMessages.png)<br/>
 _Examples of different CampaignMessages customizations_
 
 * **sfpegDmBulkSendEntryCmp** to use the BulkSendEntry standard component directly on the Campaign
 record page instead of the Bulk Send Job one, leveraging a direct lookup from the Campaign to e.g. the
 latest generated Bulk Send Job.
 
-![Bulk Send Entry](/media/sfpegBulkSendEntry.png)
+![Bulk Send Entry](/media/sfpegDmBulkSendEntry.png)
 
 ## Technical Details
 
