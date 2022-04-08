@@ -1,0 +1,18 @@
+<aura:component implements="mcdm_15:MessagePersonalizationHandler"
+                access="GLOBAL"
+                description="Dummy implementation of a Distributed Marketing personalization component enabling to simply display a logo and label, while supporting the implementation of a customized Apex logic.">
+
+    <aura:attribute access="GLOBAL" name="personalizationReadyHandler" type="Aura.Action" default="{!c.doReady}"/>    
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-box slds-theme_default ">
+        <p class="slds-align_absolute-center">
+            <img src="{!$Resource.sfpegDmPersonalizationLogo}"/>
+        </p>
+        <p class="slds-m-top_small slds-align_absolute-center">
+            {!$Label.c.sfpegDmPersonalizationLabel}
+        </p>
+    </div>
+
+</aura:component>	

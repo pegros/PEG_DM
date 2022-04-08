@@ -1,4 +1,5 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName"
+                access="GLOBAL"
                 description="Component enabling to customise the display the Distributed Marketing standard ForceCampaignMessages component in the Campaign record page.">
 	
     <!-- Configuration parameters -->

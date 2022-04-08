@@ -6,7 +6,7 @@
 ## Introduction
 
 This package contains a set of Aura components implemented to slightly adapt the out-of-the-box
-Distributed Marketing experience to streamline / simplify the steps.
+**Distributed Marketing** experience to streamline / simplify the steps.
 
 These components were built as contributions/examples for former & ongoing Advisory assignments by 
 [Pierre-Emmanuel Gros](https://github.com/pegros). 
@@ -17,18 +17,23 @@ package component (to target Campaign Members in Tableau CRM and add them to the
 ## Package Content
 
 This package contains the following Aura components:
-* **sfpegDmMessagesCmp** to customise the CampaignMessages standard component to hide some buttons
+* **sfpegDmMessagesCmp** to customise the `CampaignMessages` standard component to hide some buttons
 or sections depending on the information actually set on the campaign. 
 
 ![Messages Customization](/media/sfpegDmMessages.png)<br/>
 _Examples of different CampaignMessages customizations_
 
 
-* **sfpegDmBulkSendEntryCmp** to use the BulkSendEntry standard component directly on the Campaign
-record page instead of the Bulk Send Job one, leveraging a direct lookup from the Campaign to e.g. the
+* **sfpegDmBulkSendEntryCmp** to use the `BulkSendEntry` standard component directly on the Campaign
+record page instead of the `Bulk Send Job` one, leveraging a direct lookup from the Campaign to e.g. the
 latest generated Bulk Send Job.
 
 ![Bulk Send Entry](/media/sfpegDmBulkSendEntry.png)
+
+* **sfpegDmPersonalizationCmp** to act as a dummy implementation of a Personalisation Component
+(only a logo + message displayed) when only needing to register a custom Apex class in a `Journey Approval Plugin`
+standard record (to customise data send in the Data Entry Source in Marketing Cloud).
+
 
 ## Components Configuration
 

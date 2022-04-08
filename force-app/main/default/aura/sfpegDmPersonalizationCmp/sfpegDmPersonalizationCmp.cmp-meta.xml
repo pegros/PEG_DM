@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Dummy implementation of a Distributed Marketing personalization component enabling to simply display a logo and label, while supporting the implementation of a customized Apex logic.</description>
+</AuraDefinitionBundle>

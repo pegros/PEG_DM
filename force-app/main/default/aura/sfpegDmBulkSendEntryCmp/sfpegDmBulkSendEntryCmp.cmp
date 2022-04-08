@@ -1,4 +1,5 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                access="GLOBAL"
                 description="Component enabling to display the Distributed Marketing standard BulkSendEntry component directly in the Campaign record page.">
 
     <!-- Public configuration parameters -->
