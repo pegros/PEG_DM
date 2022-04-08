@@ -1,0 +1,72 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                description="Component enabling to display the Distributed Marketing standard BulkSendEntry component directly in the Campaign record page.">
+
+    <!-- Public configuration parameters -->
+    <aura:attribute	name="bsJobIdField"	type="String"
+                    access="global"
+                    description="ID Field on the Campaign record identifying the related Bulk Send Job."/>
+    <aura:attribute	name="isDebug"  type="Boolean"
+                    access="global"     default="false"
+                    description="Flag to activate debug mode."/>
+
+    <!-- Private technical parameters -->
+    <aura:attribute	name="targetId"         type="String"
+                    access="private"
+                    description="The target Bulk Send record Id"/>
+    <aura:attribute	name="campaignFields"   type="String[]"
+                    access="private"
+                    description="Campaign records to fetch"/>
+    <aura:attribute	name="message"          type="String"
+                    access="private"
+                    description="End User message upon end of loading"/>
+    <aura:attribute	name="isLoading"        type="Boolean"	
+                    access="private"        default="true"
+                    description="The target Bulk Send record Id"/>
+    <aura:attribute name="campaignRecord"   type="Object"
+                    access="private"	
+                    description="Data about the current CampaignRecord"/>
+    <aura:attribute name="recordLoadError"  type="String"
+                    access="private"
+                    description="Campaign Data loading error"/>
+    
+    <!-- Initialisation Handler -->    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!-- Initialisation Handler -->
+    <aura:if isTrue="{!v.campaignFields.length > 0}">
+        <force:recordData	aura:id="recordLoader"
+                            recordId="{!v.recordId}"
+                            fields="{!v.campaignFields}"
+                            targetFields="{!v.campaignRecord}"
+                            targetError="{!v.recordLoadError}"
+                            recordUpdated="{!c.finalizeInit}"/>
+    </aura:if>
+
+    <!-- Component Display -->
+    <!-- BulkSendEntry standard component -->
+    <aura:if isTrue="{!v.targetId.length > 0}">
+        <div class="slds-box slds-box_small slds-theme_default">
+            <mcdm_15:BulkSendEntry recordId="{!v.targetId}">
+            </mcdm_15:BulkSendEntry>
+        </div>
+    </aura:if>
+    <!-- Loading Spinner -->
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-box slds-box_small slds-theme_default slds-is-relative" style="height:100px;">
+            <lightning:spinner alternativeText="Loading..." size="small" />
+        </div>
+    </aura:if>
+    <!-- Error/Info Messages -->
+    <aura:if isTrue="{!v.message.length > 0}">
+        <div class="slds-box slds-box_x-small slds-theme_default slds-media slds-media_center slds-m-top_x-small">
+            <div    class="slds-media__figure">
+                <lightning:icon iconName="utility:warning" size="small" variant="warning">
+                </lightning:icon>
+            </div>
+            <div class="slds-media__body" style="word-wrap: break-word !important;">
+                {!v.message}
+            </div>
+        </div>
+    </aura:if>
+
+</aura:component>

@@ -1,0 +1,44 @@
+<aura:documentation>
+	<aura:description>
+		<div class="slds-m-top_large">
+			<h4>Overview</h4>
+			<p>The <code>&lt;c:sfpegDmMessagesCmp&gt;</code> component (available as
+				<code>SF PEG DM Campaign Messages</code> in the App Builder) is an Aura component
+				enabling to slightly customise the display of the standard <code>mcdm_15:ForceCampaignMessages</code>
+				Distributed Marketing component in the Campaign record page, by opting to hide various of its 
+				content sections and buttons via simple checkbox parameters. Combined with conditional 
+				Lightning display of the component, it enables to adapt the display of the component to 
+				various Campaign conditions and User access rights.</p>
+			<p>It is available only in Campaign record pages and proposes, as a baseline, the same parameters
+				as the standard component.</p> 
+			<br/>
+		</div>
+
+		<div class="slds-m-top_large">
+			<h4>Legal Notice</h4>
+			<p>Author: P-E GROS / April 2022</p>
+			<br/>
+			<p>MIT License</p>
+			<br/>
+			<p>Copyright (c) 2022 pegros</p>
+			<br/>
+			<p> Permission is hereby granted, free of charge, to any person obtaining a copy
+				of this software and associated documentation files (the "Software"), to deal
+				in the Software without restriction, including without limitation the rights
+				to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+				copies of the Software, and to permit persons to whom the Software is
+				furnished to do so, subject to the following conditions:</p>
+			<br/>
+			<p> The above copyright notice and this permission notice shall be included in all
+				copies or substantial portions of the Software.</p>
+			<br/>
+			<p> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+				IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+				FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+				LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+				SOFTWARE.</p>
+		</div>
+	</aura:description>
+</aura:documentation>

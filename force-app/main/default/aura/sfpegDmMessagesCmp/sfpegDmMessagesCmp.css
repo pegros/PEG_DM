@@ -1,0 +1,50 @@
+.THIS.dummy {
+    color:blue !important;
+}
+/*****************************************/
+/******** GLOBAL STYLING OVERRIDE ********/
+/*****************************************/
+.THIS .approval-summary .slds-grid .slds-grid {
+	justify-content: flex-end !important;
+}
+.THIS .approval-summary  {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+    padding-top: 0px !important;
+	/*padding-bottom: 0px !important;*/
+	border-top: none !important;
+}
+.THIS .mcdm_15CampaignMessages .slds-card__body {
+	margin-bottom: 0px !important;
+}
+
+/*****************************************/
+/* TARGETED SUB-COMPONENT HIDING CLASSES */
+/*****************************************/
+.THIS .hideCardHeader .mcdm_15CampaignMessages .slds-card__header {
+	display:none !important;
+}
+.THIS .hideBulkSend .bulk-send-button {
+	display:none !important;
+}
+.THIS .hideSegmentSend .segmented-send-button {
+	display:none !important;
+}
+.THIS .removeSegmentSendPadding .segmented-send-button {
+	padding-right: 0px !important;
+}
+.THIS .hideSummary .approval-summary .slds-grid h3 {
+	display:none !important;
+}
+.THIS .hideSummary .approval-summary .slds-grid h3 ~ div {
+	display:none !important;
+}
+.THIS .hideCompleteSummary .approval-summary {
+	display:none !important;
+}
+.THIS .hideTable .mcdm_15CampaignMessages .slds-card__body table {
+	display:none !important;
+}
+.THIS .hideTable .mcdm_15CampaignMessages .approval-summary {
+	padding-bottom: 0px !important;
+}

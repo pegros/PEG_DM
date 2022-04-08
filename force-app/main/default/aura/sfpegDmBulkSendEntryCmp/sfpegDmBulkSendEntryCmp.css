@@ -1,0 +1,19 @@
+.THIS.dummy {
+    color: blue;
+}
+/**** Right align send button ****/
+.THIS .mcdm_15BulkSendEntry .slds-m-around_medium {
+    overflow: hidden !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.THIS .mcdm_15BulkSendEntry .slds-m-left_small {
+    margin-left: 0px !important;
+    padding-bottom: 4px !important;
+}
+.THIS .mcdm_15BulkSendEntry button {
+    float: right !important;
+    display: block !important;
+}

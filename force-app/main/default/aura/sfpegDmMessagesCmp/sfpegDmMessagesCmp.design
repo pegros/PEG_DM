@@ -1,0 +1,32 @@
+<design:component label="SF PEG DM Campaign Messages">
+
+    <design:attribute   name="designContactMobileCustomField"   label="Mobile Number API Name for Contact"   
+                        description="Select the API Name that contains the mobile numbers for your messages (Standard DM)." />
+    <design:attribute   name="designLeadMobileCustomField"      label="Mobile Number API Name for Lead"   
+                        description="Select the API Name that contains the mobile numbers for your messages (Standard DM)." />
+
+    <design:attribute   name="hideCardHeader"   label="Hide Card Header?"   
+                        default="false"
+                        description="Flag to hide the main card header." />
+    <design:attribute   name="hideSegmentSend"  label="Hide Segmented Send Button?"   
+                        default="false"
+                        description="Flag to hide the segmented send action button" />
+    <design:attribute   name="hideBulkSend"     label="Hide Bulk Send Button?"   
+                        default="false"
+                        description="Flag to hide the bulk send action button" />
+    <design:attribute   name="hideSummary"      label="Hide Summary section?"   
+                        default="false"
+                        description="Flag to hide the summary section" />
+    <design:attribute   name="hideTable"        label="Hide Message Table?"   
+                        default="false"
+                        description="Flag to hide the customized message table" />
+
+    <design:attribute   name="isDebug"          label="Show Debug?"   
+                        default="false"
+                        description="Flag to display debug information" />
+
+    <sfdc:objects>
+        <sfdc:object>Campaign</sfdc:object>
+    </sfdc:objects>
+
+</design:component>

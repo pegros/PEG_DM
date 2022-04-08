@@ -1,0 +1,13 @@
+<design:component label="SF PEG DM Bulk Send Entry">
+
+    <design:attribute   name="bsJobIdField"	label="Bulk Send Job ID Field"   
+                        description="API Name of the Campaign lookup field identifying the Bulk Send Job to send." />
+    <design:attribute   name="isDebug"	label="Show Debug?"   
+                        default="false"
+                        description="Flag to display debug information and logs." />
+
+    <sfdc:objects>
+        <sfdc:object>Campaign</sfdc:object>
+    </sfdc:objects>
+    
+</design:component>

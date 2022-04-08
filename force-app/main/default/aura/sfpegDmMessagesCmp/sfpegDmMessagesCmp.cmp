@@ -1,0 +1,65 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName"
+                description="Component enabling to customise the display the Distributed Marketing standard ForceCampaignMessages component in the Campaign record page.">
+	
+    <!-- Configuration parameters -->
+    <aura:attribute name="designContactMobileCustomField"	type="String"   
+                    access="global"
+                    description="The Contact custom field to replace mobile phone field (standard DM Messages parameter)" />
+    <aura:attribute name="designLeadMobileCustomField"		type="String"   
+                    access="global"
+                    description="The Lead custom field to replace mobile phone field (standard DM Messages parameter)" />
+
+    <aura:attribute name="hideCardHeader"	type="Boolean"   
+                    access="global"         default="false"
+                    description="Flag to hide the card header" />
+    <aura:attribute name="hideSegmentSend"	type="Boolean"   
+                    access="global"         default="false"
+                    description="Flag to hide the segmented send action button." />
+    <aura:attribute name="hideBulkSend"     type="Boolean"   
+                    access="global"         default="false"
+                    description="Flag to hide the bulk send action button." />
+    <aura:attribute name="hideSummary"      type="Boolean"   
+                    access="global"         default="false"
+                    description="Flag to hide the summary section." />
+    <aura:attribute name="hideTable"        type="Boolean"   
+                    access="global"         default="false"
+                    description="Flag to hide the customized message table." />
+    
+    <aura:attribute name="isDebug"          type="Boolean"   
+                    access="global"         default="false"
+                    description="Flag to display debug information" />
+
+    <!-- Configuration parameters -->
+    <aura:attribute name="messageClass"     type="String"   
+                    access="private"
+                    description="CSS classes to inject changes from the different flags." />
+    
+    <!-- Initialisation Handler -->    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Component Display -->
+    <div class="slds-box slds-box_small slds-theme_default">
+        <div class="{!v.messageClass}">
+            <mcdm_15:ForceCampaignMessages  recordId="{!v.recordId}"
+                                            sObjectName="{!v.sObjectName}"
+                                           	designContactMobileCustomField="{#v.designContactMobileCustomField}"
+                                           	designLeadMobileCustomField="{#v.designLeadMobileCustomField}" />
+        </div>
+    </div>
+
+    <aura:if isTrue="{#v.isDebug}">
+    	<div class="slds-box slds-theme_default slds-m-top_small">
+            <h1 class="slds-text-title_bold slds-var-m-bottom_x-small">Distributed Marketing Customisation</h1>
+            <ul class="slds-list_dotted">
+            	<li>{!v.sObjectName}: {!v.recordId} </li>
+	            <li class="{#v.hideCardHeader?'slds-text-color_success':'slds-text-color_error'}">Hide Card Header: {#v.hideCardHeader}</li>
+    	        <li class="{#v.hideSegmentSend?'slds-text-color_success':'slds-text-color_error'}">Hide Segmented Send Button: {#v.hideSegmentSend}</li>
+        	    <li class="{#v.hideBulkSend?'slds-text-color_success':'slds-text-color_error'}">Hide Bulk Send Button: {#v.hideBulkSend}</li>
+            	<li class="{#v.hideSummary?'slds-text-color_success':'slds-text-color_error'}">Hide Summary Section: {#v.hideSummary}</li>
+            	<li class="{#v.hideTable?'slds-text-color_success':'slds-text-color_error'}">Hide Message Table: {#v.hideTable}</li>
+                <li>CSS classes: {!v.messageClass}</li>  
+            </ul>
+        </div>
+    </aura:if>
+
+</aura:component>
